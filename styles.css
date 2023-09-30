@@ -1,9 +1,15 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
 header{
     min-height: 15vh;
+    background-color: aquamarine;
 }
 main{
     min-height: 75vh;
+    background-color: blueviolet;
 }
 footer{
     min-height: 10vh;
+    background-color: gray;
 }
