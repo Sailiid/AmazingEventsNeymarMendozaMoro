@@ -1,15 +1,52 @@
 .selector-for-some-widget {
     box-sizing: content-box;
-  }
-header{
-    min-height: 15vh;
-    background-color: aquamarine;
 }
-main{
-    min-height: 75vh;
-    background-color: blueviolet;
-}
-footer{
+
+header {
     min-height: 10vh;
-    background-color: gray;
+    background-color:	 #ffbf80;
+}
+
+main {
+    min-height: 80vh;
+   
+
+}
+
+.carousel-item {
+    max-height: 30vh;
+}
+
+.imagencarrusel {
+    max-height: 45vh;
+    width: 100vw;
+    
+}
+
+
+.tarjetas {
+  
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 1rem;
+
+}
+
+
+.cuerpotarjetas {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    
+
+}
+
+footer {
+    min-height: 10vh;
+    background-color:	 #ffbf80;
+}
+.redes{
+    height: 3rem;
+    width: 3rem;
 }
