@@ -3,7 +3,7 @@
 }
 
 header {
-    min-height: 10vh;
+    min-height: 9vh;
     background-color:	 #ffbf80;
 }
 
@@ -12,14 +12,22 @@ main {
    
 
 }
+.carousel-caption {
+    font-size: 5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+   
+  }
 
 .carousel-item {
-    max-height: 30vh;
+    max-height: 25vh;
 }
 
+
 .imagencarrusel {
-    max-height: 45vh;
+    max-height: 50vh;
     width: 100vw;
+
     
 }
 
@@ -29,10 +37,13 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    margin-top: 1rem;
+    card-border-color: bl
+
 
 }
-
+.card-border-color{ bl
+    
+}               
 
 .cuerpotarjetas {
     display: flex;
@@ -41,12 +52,18 @@ main {
     
 
 }
+fieldset{
+    border-radius: 3px;
+    border-color: black;
+    width: 80vh;
+}
+
 
 footer {
-    min-height: 10vh;
+    min-height: 9vh;
     background-color:	 #ffbf80;
 }
 .redes{
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
 }
