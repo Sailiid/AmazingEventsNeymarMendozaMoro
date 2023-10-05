@@ -14,7 +14,7 @@ main {
 }
 .carousel-caption {
     font-size: 5rem;
-    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 0.5px 0.5px #000000;
     font-family: 'Montserrat', sans-serif;
    
   }
@@ -41,9 +41,7 @@ main {
 
 
 }
-.card-border-color{ bl
-    
-}               
+                  
 
 .cuerpotarjetas {
     display: flex;
@@ -57,11 +55,14 @@ fieldset{
     border-color: black;
     width: 80vh;
 }
+.table {
+    max-width: 70%;
+}
 
 
 footer {
     min-height: 9vh;
-    background-color:	 #ffbf80;
+    background-color:	 #ebc8a6;
 }
 .redes{
     height: 2.5rem;
