@@ -19,10 +19,10 @@ main {
    
   }
 
+
 .carousel-item {
     max-height: 25vh;
 }
-
 
 .imagencarrusel {
     max-height: 50vh;
@@ -61,7 +61,7 @@ fieldset{
 
 
 footer {
-    min-height: 9vh;
+    min-height: 8vh;
     background-color:	 #ebc8a6;
 }
 .redes{
