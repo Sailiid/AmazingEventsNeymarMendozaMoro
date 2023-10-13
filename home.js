@@ -1,15 +1,23 @@
 console.log("hola")
-const cardsHome = document.getElementById(cards)
-const tarjetas = document.createElement("div")
-tarjetas.classList.add ("tarjetas")
-tarjetas.style.width = "15rem"
-tarjetas.innerHTML= ` <img src="./Recursos_Amazing_Events_Task_1/outing_to_the_museum.jpg" class="card-img-top" alt="museum">
-<div class="card-body">
-    <h5 class="card-title">Art Exhibition</h5>
-</div>
-<div class="cuerpotarjetas">
-    <p class="card-text"> $ 15</p>
-    <a href="./Details.html" class="btn btn-dark">Details</a>
-</div>`
 
-cardsHome.appendChild(tarjetas)
+const dataSprint = data.events
+const cardsHome = document.getElementById("cards")
+
+
+for (events of dataSprint) {
+    const tarjetas = document.createElement("div")
+    tarjetas.classList.add("tarjetas")
+    tarjetas.style.width = "13rem"
+    tarjetas.style.height= "18rem"
+    tarjetas.innerHTML = ` <div class="d-flex flex-column p-1 rounded-top bg-body-secondary border border-dark">
+ <img src="${events.image}" class="imagen card-img-top rounded-top" alt="museum">
+ <div class="card-body text-center text-uppercase pt-3">
+    <h5 class="card-title ">${events.name}</h5>
+ </div>
+ <div class="cuerpotarjetas">
+    <p class="card-text fs-4 text-danger"> $ ${events.price}</p>
+    <a href="./Details.html" class="btn btn-dark">Details</a>
+ </div>
+ </div>`
+    cardsHome.appendChild(tarjetas)
+}
