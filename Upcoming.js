@@ -1,7 +1,15 @@
 console.log("hola")
-
 const dataSprint = data.events
+const arrayDatos = []
+
 let datos = data.currentDate
+for (let events of dataSprint){
+    
+    if(events.date > datos){
+        arrayDatos.push(events)
+    }
+}
+console.log(arrayDatos)
 
 const cardsUpcoming = document.getElementById("UpComing")
 

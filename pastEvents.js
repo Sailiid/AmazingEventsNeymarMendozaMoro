@@ -1,9 +1,18 @@
 console.log("hola")
 
 const dataSprint = data.events
-let datos = data.currentDate
+const arrayDatos = []
 
+let datos = data.currentDate
+for (let events of dataSprint){
+    
+    if(events.date < datos){
+        arrayDatos.push(events)
+    }
+}
+console.log(arrayDatos)
 const cardsPast = document.getElementById("Past")
+
 
 for ( let events of dataSprint) {
     if (datos > events.date) {
