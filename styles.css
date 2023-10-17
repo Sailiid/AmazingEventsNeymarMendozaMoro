@@ -4,12 +4,12 @@
 
 header {
     min-height: 9vh;
-    background-color:	#809bce;
+    background-color:	#000000;
 }
 
 main {
-    min-height: 82.5vh;
-    background-color: #b8e0d2;
+    min-height: 83vh;
+    background-color: #14213d;
    
 
 }
@@ -47,10 +47,14 @@ main {
 
 .cuerpotarjetas {
     display: flex;
-    justify-content: space-around;
-    padding: 0.5rem;
-    
+    justify-content: space-between;
+    padding-bottom: 1rem;
 
+
+}
+.imagen{
+    height: 25rem;
+    width: 15rem;
 }
 fieldset{
     border-radius: 3px;
@@ -64,7 +68,7 @@ fieldset{
 
 footer {
     min-height: 8vh;
-    background-color:	 #d6eadf;
+    background-color:	 #fca311;
 }
 .redes{
     height: 2.5rem;
