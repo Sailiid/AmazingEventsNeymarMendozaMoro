@@ -4,12 +4,12 @@
 
 header {
     min-height: 9vh;
-    background-color:	#000000;
+    background-color:	#3a0ca3;
 }
 
 main {
     min-height: 83vh;
-    background-color: #14213d;
+    background-color: #7209b7;
    
 
 }
@@ -68,7 +68,7 @@ fieldset{
 
 footer {
     min-height: 8vh;
-    background-color:	 #fca311;
+    background-color:	 #f72585;
 }
 .redes{
     height: 2.5rem;
