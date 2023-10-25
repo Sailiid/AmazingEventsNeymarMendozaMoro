@@ -30,7 +30,7 @@ for ( let events of dataSprint) {
  </div>
  <div class="cuerpotarjetas px-4">
     <p class="card-text fs-4 text-danger"> $ ${events.price}</p>
-    <a href="./Details.html" class="btn btn-danger">Details</a>
+    <a href="./Details.html?_id=${events._id}" class="btn btn-danger">Details</a>
  </div>
  </div>`
         cardsPast.appendChild(tarjetas)

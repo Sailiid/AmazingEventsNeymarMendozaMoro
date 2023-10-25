@@ -39,7 +39,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: stretch;
-    card-border-color: bl
+   
 
 
 }
@@ -56,6 +56,7 @@ main {
     height: 25rem;
     width: 15rem;
 }
+
 fieldset{
     border-radius: 3px;
     border-color: black;
