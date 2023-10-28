@@ -17,6 +17,11 @@ const cardsPast = document.getElementById("Past")
 // Funcion Checkbox 
 let categoriasCheckbox = Array.from(arrayDatos.map(events => events.category.replace(" ", "-")))
 console.log(categoriasCheckbox);
+
+function buscador (events) {
+    return events.filter (events => events.name.toLowerCase().includes(searchPast.value.toLowerCase()))
+  }
+
 function filtroCheckbox (categorias) {
     categorias.forEach(categoria => {
     let  seleccion = document.createElement("div")
@@ -32,7 +37,7 @@ function filtroCheckbox (categorias) {
 
 filtroCheckbox(categoriasCheckbox)
 
-checkboxPast.addEventListener("change", () => pastEscuchador(arrayDatos))
+
 
 
 // Funcion de los Checkbox 
@@ -57,6 +62,9 @@ function pastEscuchador(arrayCategoria) {
    }
 
 function cardsEventsPast (events){
+    if (events.length === 0) {
+        cardsPast.innerHTML = `<h2 class="text-light align-items-center">Lo Siento, su Busqueda no se ha encontrado</h2>`
+    } else {
     cardsPast.innerHTML = "";
 for ( let evento of events) {
         const tarjetas = document.createElement("div")
@@ -79,10 +87,23 @@ for ( let evento of events) {
         cardsPast.appendChild(tarjetas)
     }
 }
+}
 cardsEventsPast(arrayDatos)
+
+function CombinacionFiltro(events) {
+    let checkboxFiltro = pastEscuchador(events);
+    let buscadorFiltro = buscador(checkboxFiltro)
+    cardsEventsPast(buscadorFiltro)
+
+}
  
 // Escuchador 
 checkboxPast.addEventListener('change', () => {
-    let cartasFiltradas = pastEscuchador(arrayDatos); 
-    return cardsEventsPast(cartasFiltradas)
+    CombinacionFiltro(arrayDatos)
+
  })
+
+searchPast.addEventListener("keyup", () => {
+    CombinacionFiltro(arrayDatos)
+ }
+)

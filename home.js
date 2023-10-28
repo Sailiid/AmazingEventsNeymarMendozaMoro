@@ -22,8 +22,9 @@ function checkboxCards(categoria) {
 }
 checkboxCards(arrayCategoria)
 
-function buscador (escuchador_funcion) {
-  escuchador_funcion.filter (events => events.name.toLowerCase().includes(search.value.toLowerCase()))
+function buscador (events) {
+  
+  return events.filter (events => events.name.toLowerCase().includes(search.value.toLowerCase()))
    
 }
 
@@ -56,6 +57,9 @@ function escuchador(events) {
 
 
 function tarjetasSprint(events) { 
+   if (events.length === 0) {
+      cardsHome.innerHTML = `<h2 class="text-light align-items-center">Lo Siento, su Busqueda no se ha encontrado</h2>`
+  } else {
    cardsHome.innerHTML = "";
    for (let evento of events) { 
       const tarjetas = document.createElement("div")
@@ -78,18 +82,23 @@ function tarjetasSprint(events) {
       cardsHome.appendChild(tarjetas)
    }
 }
+}
  
 tarjetasSprint(dataSprint)
 
+function CombinacionFiltro(events) {
+   let checkboxFiltro = escuchador(events);
+   let buscadorFiltro = buscador(checkboxFiltro)
+   tarjetasSprint(buscadorFiltro)
+
+}
 
 //escuchador
 checkbox.addEventListener('change', () => {
-   let cartasFiltradas = escuchador(dataSprint); 
-   return tarjetasSprint(cartasFiltradas)
+   CombinacionFiltro(dataSprint)
 })
 
 search.addEventListener("keyup", () => {
-let textoBuscador = buscador(dataSprint)
-tarjetasSprint(textoBuscador)
+   CombinacionFiltro(dataSprint)
 }
 )
