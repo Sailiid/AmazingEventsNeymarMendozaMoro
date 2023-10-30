@@ -60,7 +60,7 @@ function UpComingEscuchador(arrayCategoria) {
 
 function cardsEventsUpcomming(events) {
     if (events.length === 0) {
-        cardsUpcoming.innerHTML = `<h2 class="text-light align-items-center">Lo Siento, su Busqueda no se ha encontrado</h2>`
+        cardsUpcoming.innerHTML = `<h2 class="text-light align-items-center"><strong>"Sorry, your search was not found"</strong></h2>`
     } else {
         cardsUpcoming.innerHTML = "";
         for (let evento of events) {

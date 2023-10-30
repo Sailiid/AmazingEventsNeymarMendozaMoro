@@ -63,7 +63,7 @@ function pastEscuchador(arrayCategoria) {
 
 function cardsEventsPast (events){
     if (events.length === 0) {
-        cardsPast.innerHTML = `<h2 class="text-light align-items-center">Lo Siento, su Busqueda no se ha encontrado</h2>`
+        cardsPast.innerHTML = `<h2 class="text-light align-items-center"><strong>"Sorry, your search was not found"</strong></h2>`
     } else {
     cardsPast.innerHTML = "";
 for ( let evento of events) {
