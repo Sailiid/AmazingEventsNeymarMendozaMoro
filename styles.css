@@ -52,7 +52,11 @@ main {
 
 
 }
-
+.imagendetail{
+   
+    object-fit: cover;
+   
+}
 
 fieldset{
     border-radius: 3px;

@@ -65,7 +65,7 @@ export function tarjetasSprint(events) {
          tarjetas.innerHTML = ` <div class="d-flex flex-column p-1 rounded-top bg-body-secondary border border-light">
   <img src="${evento.image}" class=" imagen card-img-top rounded-top h-50" alt="">
   <div class="card-body text-center text-uppercase pt-3">
-     <h5 class="card-title ">${evento.name}</h5>
+     <h5 class="card-title "><strong>${evento.name}</strong></h5>
      </div>
      <div class="card-body text-center fs-5>
      <p class="card-text">${evento.description}</p>
@@ -134,7 +134,7 @@ export function Tabla2(events) {
       let porcentaje = (filtardosEventos.map(evento => (evento.estimate / evento.capacity) * 100).reduce((a, b) => a + b, 0)) / filtardosEventos.length;
 
       let tr2 = document.createElement("tr");
-      tr2.className = "table-primary"
+      tr2.className = "table-primary" , "align-items-center"
       tr2.innerHTML = `<td>${category}</td>
                         <td>$${ganancias}</td>
                         <td>${porcentaje.toFixed(2)}%</td>`;
@@ -162,7 +162,7 @@ export function Tabla3(events) {
       }
 
       let tr3 = document.createElement("tr");
-      tr3.className = "table-primary";
+      tr3.className = "table-primary","align-items-center";
       tr3.innerHTML = `<td>${category}</td>
                      <td>$${Ganancias}</td>
                      <td>${porcentajes.toFixed(2)}%</td>`;
@@ -192,11 +192,11 @@ export function details(events) {
          console.log(events.assistance)
 
          tarjetas.classList.add("tarjetas")
-         tarjetas.style.width = "65rem"
+         tarjetas.style.width = "auto"
          tarjetas.innerHTML = `<div class="card" style="max-width: 1050px;">
        <div class="row g-0">
        <div class="col-md-8"> 
-       <img src="${events.image}"class="img-fluid rounded-star" alt="">
+       <img src="${events.image}"class="img-fluid rounded-star h-100 imagendetail" alt="">
        </div>
        <div class="col-md-4">
        <div class="card-body">
